@@ -70,6 +70,53 @@
         font-size: 1.2rem;
       }
 
+      .dropdown {
+        position: relative;
+      }
+
+      .dropdown-icon {
+        margin-left: 5px;
+        font-size: 0.7rem;
+      }
+
+      .dropdown-menu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: white;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        min-width: 200px;
+        z-index: 100;
+        border-radius: 4px;
+        padding: 0.5rem 0;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(10px);
+        transition: all 0.3s ease;
+      }
+
+      .dropdown:hover .dropdown-menu {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+      }
+
+      .dropdown-menu li {
+        margin: 0;
+      }
+
+      .dropdown-menu a {
+        padding: 0.7rem 1.5rem;
+        display: block;
+        font-weight: 400;
+        border-left: 3px solid transparent;
+      }
+
+      .dropdown-menu a:hover {
+        background-color: #f9f9f9;
+        border-left: 3px solid #d6a461;
+      }
+
       .hero {
         height: 80vh;
         background-image: linear-gradient(
@@ -347,22 +394,47 @@
       <nav class="navbar">
         <div class="logo">Sofa<span>Élégance</span></div>
         <ul class="nav-links">
-          <li><a href="#">Accueil</a></li>
-          <li><a href="#">Collection</a></li>
-          <li><a href="#">Nouveautés</a></li>
-          <li><a href="#">Promotions</a></li>
-          <li><a href="#">À propos</a></li>
-          <li><a href="#">Contact</a></li>
+          <li><a href="index.html">Accueil</a></li>
+          <li class="dropdown">
+            <a href="collection.html"
+              >Collection <span class="dropdown-icon">▼</span></a
+            >
+            <ul class="dropdown-menu">
+              <li><a href="sofas.html">Sofas & Canapés</a></li>
+              <li><a href="fauteuils.html">Fauteuils</a></li>
+              <li><a href="tables.html">Tables & Bureaux</a></li>
+              <li><a href="rangements.html">Rangements</a></li>
+              <li><a href="decoration.html">Décoration</a></li>
+            </ul>
+          </li>
+          <li><a href="nouveautes.html">Nouveautés</a></li>
+          <li class="dropdown">
+            <a href="promotions.html"
+              >Promotions <span class="dropdown-icon">▼</span></a
+            >
+            <ul class="dropdown-menu">
+              <li><a href="soldes.html">Soldes</a></li>
+              <li><a href="destockage.html">Déstockage</a></li>
+              <li><a href="ventes-privees.html">Ventes Privées</a></li>
+            </ul>
+          </li>
+          <li><a href="a-propos.html">À propos</a></li>
+          <li><a href="contact.html">Contact</a></li>
         </ul>
         <div class="nav-icons">
-          <a href="#">🔍</a>
-          <a href="#">👤</a>
-          <a href="#">🛒</a>
+          <a href="recherche.html">🔍</a>
+          <a href="compte.html">👤</a>
+          <a href="panier.html">🛒</a>
         </div>
       </nav>
     </header>
 
-    <section class="hero">
+    <section
+      class="hero"
+      style="
+        background-image: url('/Users/corentin/Library/CloudStorage/OneDrive-Personnel/Documents/MY_COMPANY/Micro/PROJETS/FARIDA/maquette-sofa/Images/background.jpg');
+      "
+    >
       <div class="hero-content">
         <h1>Confort et élégance pour votre intérieur</h1>
         <p>
@@ -378,7 +450,7 @@
       <div class="category-grid">
         <div class="category-card">
           <img
-            src="/Users/corentin/Library/CloudStorage/OneDrive-Personnel/Documents/MY_COMPANY/Micro/PROJETS/FARIDA/Images/sofas.jpg"
+            src="/Users/corentin/Library/CloudStorage/OneDrive-Personnel/Documents/MY_COMPANY/Micro/PROJETS/FARIDA/maquette-sofa/Images/sofas.jpg"
             alt="Sofas"
           />
           <div class="overlay">
@@ -388,7 +460,7 @@
         </div>
         <div class="category-card">
           <img
-            src="/Users/corentin/Library/CloudStorage/OneDrive-Personnel/Documents/MY_COMPANY/Micro/PROJETS/FARIDA/Images/fauteuil.jpg"
+            src="/Users/corentin/Library/CloudStorage/OneDrive-Personnel/Documents/MY_COMPANY/Micro/PROJETS/FARIDA/maquette-sofa/Images/fauteuil.jpg"
             alt="Fauteuils"
           />
           <div class="overlay">
@@ -398,7 +470,7 @@
         </div>
         <div class="category-card">
           <img
-            src="/Users/corentin/Library/CloudStorage/OneDrive-Personnel/Documents/MY_COMPANY/Micro/PROJETS/FARIDA/Images/table.jpg"
+            src="/Users/corentin/Library/CloudStorage/OneDrive-Personnel/Documents/MY_COMPANY/Micro/PROJETS/FARIDA/maquette-sofa/Images/table.jpg"
             alt="Tables"
           />
           <div class="overlay">
